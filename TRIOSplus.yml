@@ -1,0 +1,289 @@
+openapi: "3.0.2"
+info:
+  title: TRIOS Plus
+  description: Trios Plus - Discover Our Vibrant Coworking Space Near You and Watch Your Team Blossom with the Finest Office Amenities
+  contact:
+    name: TRIOS Plus
+    url: "https://trios.co.in/"
+    email: contact@trios.co.in
+  version: "1.0.0"
+servers:
+  - url: https://8e9jyfmx96.execute-api.ap-south-1.amazonaws.com/staging/dynamic
+    description: "TRIOS Plus Api URL"
+    variables:
+      basePath:
+        default: "staging"
+tags:
+  - name: Trios Plus
+    description: Trios Plus - Discover Our Vibrant Coworking Space Near You and Watch Your Team Blossom with the Finest Office Amenities
+
+paths:
+  /company:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Post Company Data"
+      description: "The /company endpoint is used to create a new company within the system."
+
+      requestBody:
+        content:
+          application,json:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+
+          application.xml:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+      responses:
+        "201":
+          description: "Company Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/companySchema"
+
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/unauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT Authorization header using the Bearer scheme.
+    Firebase-staging:
+      type: "oauth2"
+      flows: {}
+      x-amazon-apigateway-authorizer:
+        identitySource: "$request.header.Authorization"
+        jwtConfiguration:
+          audience:
+            - "trios-plus-test"
+          issuer: "https://securetoken.google.com/trios-plus-test"
+        type: "jwt"
+  schemas:
+    companySchema:
+      type: object
+      properties:
+        address:
+          type: string
+          description: Address of the company
+          example: "Plot No B, JVA Mall, New Kopre Gaothan, Hingane Bk Maharshi, Karve Nagar"
+          required:
+            - "Address is required"
+
+        name:
+          type: string
+          description: Name of the company
+          example: "Asus1"
+          required:
+            - "Name is required"
+
+        pincode:
+          type: string
+          description: Pincode of the company
+          example: "411052"
+          required:
+            - "Pincode is required"
+
+        state:
+          type: string
+          description: State of the company
+          example: "Maharashtra"
+          required:
+            - "State is required"
+
+        city:
+          type: string
+          description: City of the company
+          example: "Pune City"
+          required:
+            - "City is required"
+
+        billingAddresses:
+          type: array
+          description: Billing addresses of the company
+          items:
+            type: object
+            properties:
+              address:
+                type: string
+                description: Billing address of the company
+              pincode:
+                type: string
+                description: Billing address pincode
+              city:
+                type: string
+                description: Billing address city
+              state:
+                type: string
+                description: Billing address state
+            required:
+              - "At least one address is required"
+
+        users:
+          type: array
+          items:
+            type: string
+          description: List of user IDs associated with the company
+          example: []
+
+        isVerified:
+          type: boolean
+          description: Indicates whether the company is verified
+          example: true
+
+        status:
+          type: string
+          description: Status of the company
+          enum:
+            - "ACTIVE"
+            - "INACTIVE"
+          example: "ACTIVE"
+          required:
+            - "Status is required - in All Caps"
+
+        country:
+          type: string
+          description: Country of the company
+          example: "India"
+          required:
+            - "Country is required"
+
+        createdAt:
+          type: string
+          format: date-time
+          description: Date and time when the company was created
+          example: "2024-04-23T09:29:37.336Z"
+          required:
+            - "CreatedAt is required"
+
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Date and time when the company was last modified
+          example: "2024-04-23T09:29:39.319Z"
+          required:
+            - "ModifiedAt is required"
+
+        isProcMaster:
+          type: boolean
+          description: Indicates whether the company is a procurement master
+
+        isProcStar:
+          type: boolean
+          description: Indicates whether the company is a procurement star
+
+        userEmails:
+          type: array
+          items:
+            type: string
+          description: List of email addresses associated with the company
+          example: []
+
+        companyStatus:
+          type: string
+          description: Status of the company
+          enum:
+            - "ACTIVE"
+            - "INACTIVE"
+          example: "ACTIVE"
+          required:
+            - "Status is required - in All Caps"
+
+        companyType:
+          type: string
+          description: Type of the company
+          example: "vendor"
+          required:
+            - "Company Type is required, either vendor or empty string"
+
+        vendorDocuments:
+          type: array
+          items:
+            type: string
+          description: List of vendor documents associated with the company
+          example: []
+
+        GSTIN:
+          type: string
+          description: Goods and Services Tax Identification Number of the company
+          example: "564ADSFASD465"
+
+        orgId:
+          type: string
+          description: Organization ID of the company
+          example: "trios"
+          required:
+            - "Organization ID is required"
+
+    badRequest:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "400"
+        error:
+          type: string
+          description: Error message
+          example: "Bad Request - Missing Information"
+
+    unauthorized:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "401"
+        error:
+          type: string
+          description: Error message
+          example: "Unauthorized"
+
+    internalServerErrror:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "500"
+        error:
+          type: string
+          description: Error message
+          example: "Internal Server Error"
+
+x-amazon-apigateway-cors:
+  allowMethods:
+    - "*"
+  allowHeaders:
+    - "*"
+  exposeHeaders:
+    - "*"
+  maxAge: 0
+  allowCredentials: false
+  allowOrigins:
+    - "*"

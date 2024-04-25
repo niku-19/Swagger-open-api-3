@@ -1,0 +1,466 @@
+openapi: "3.0.1"
+info:
+  title: "TriosPlus"
+  version: "2024-02-28 11:17:52UTC"
+servers:
+- url: "https://8e9jyfmx96.execute-api.ap-south-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "staging"
+paths:
+  /utils/s3:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/s3"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+    delete:
+      responses:
+        default:
+          description: "Default response for DELETE /utils/s3"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /dynamic/{collection_name}:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /dynamic/{collection_name}"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:MongoDynamic/invocations"
+        connectionType: "INTERNET"
+    put:
+      responses:
+        default:
+          description: "Default response for PUT /dynamic/{collection_name}"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:MongoDynamic/invocations"
+        connectionType: "INTERNET"
+    post:
+      responses:
+        default:
+          description: "Default response for POST /dynamic/{collection_name}"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:MongoDynamic/invocations"
+        connectionType: "INTERNET"
+    parameters:
+    - name: "collection_name"
+      in: "path"
+      description: "Generated path parameter for collection_name"
+      required: true
+      schema:
+        type: "string"
+  /public/operational_branches:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /public/operational_branches"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:PublicMongo/invocations"
+        connectionType: "INTERNET"
+  /user/account_info/{email}:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /user/account_info/{email}"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:TriosPlus_UserFunction/invocations"
+        connectionType: "INTERNET"
+    parameters:
+    - name: "email"
+      in: "path"
+      description: "Generated path parameter for email"
+      required: true
+      schema:
+        type: "string"
+  /utils/analytics/active_branches:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/active_branches"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/active_clients:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/active_clients"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/branch_occupancy:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/branch_occupancy"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/branch_revenue:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/branch_revenue"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/client_revenue:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/client_revenue"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/nps:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/nps"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/product_revenue:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/product_revenue"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/revenue_month_to_date:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/revenue_month_to_date"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/analytics/revenue_year_to_date:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/analytics/revenue_year_to_date"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/franchisee/data:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /utils/franchisee/data"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /dynamic/aggregate/{collection_name}:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /dynamic/aggregate/{collection_name}"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:MongoDynamic/invocations"
+        connectionType: "INTERNET"
+    parameters:
+    - name: "collection_name"
+      in: "path"
+      description: "Generated path parameter for collection_name"
+      required: true
+      schema:
+        type: "string"
+  /public/feedback:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /public/feedback"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:PublicMongo/invocations"
+        connectionType: "INTERNET"
+  /public/{collection_name}/{pipeline_name}:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /public/{collection_name}/{pipeline_name}"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:PublicMongo/invocations"
+        connectionType: "INTERNET"
+    parameters:
+    - name: "collection_name"
+      in: "path"
+      description: "Generated path parameter for collection_name"
+      required: true
+      schema:
+        type: "string"
+    - name: "pipeline_name"
+      in: "path"
+      description: "Generated path parameter for pipeline_name"
+      required: true
+      schema:
+        type: "string"
+  /utils/bulk_assets:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/bulk_assets"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/bulk_invoice:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/bulk_invoice"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/invoice:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/invoice"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/purchase_order:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/purchase_order"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/purchase_request:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/purchase_request"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/quotation:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/quotation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/razorpay_payment:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/razorpay_payment"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/ses/send:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/ses/send"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/ses/template:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/ses/template"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /utils/ticket:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /utils/ticket"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+  /public/feedback/{feedback_id}:
+    put:
+      responses:
+        default:
+          description: "Default response for PUT /public/feedback/{feedback_id}"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:PublicMongo/invocations"
+        connectionType: "INTERNET"
+    parameters:
+    - name: "feedback_id"
+      in: "path"
+      description: "Generated path parameter for feedback_id"
+      required: true
+      schema:
+        type: "string"
+  /utils/update_branchId:
+    put:
+      responses:
+        default:
+          description: "Default response for PUT /utils/update_branchId"
+      security:
+      - Firebase-staging: []
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:352152698384:function:UtilsFunction/invocations"
+        connectionType: "INTERNET"
+components:
+  securitySchemes:
+    Firebase-staging:
+      type: "oauth2"
+      flows: {}
+      x-amazon-apigateway-authorizer:
+        identitySource: "$request.header.Authorization"
+        jwtConfiguration:
+          audience:
+          - "trios-plus-test"
+          issuer: "https://securetoken.google.com/trios-plus-test"
+        type: "jwt"
+x-amazon-apigateway-cors:
+  allowMethods:
+  - "*"
+  allowHeaders:
+  - "*"
+  exposeHeaders:
+  - "*"
+  maxAge: 0
+  allowCredentials: false
+  allowOrigins:
+  - "*"
+x-amazon-apigateway-importexport-version: "1.0"
