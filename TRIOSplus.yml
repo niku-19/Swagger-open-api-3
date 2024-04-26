@@ -51,13 +51,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/badRequest"
+                $ref: "#/components/schemas/badRequestBadRequest"
         "401":
           description: "Unauthorized"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/unauthorized"
+                $ref: "#/components/schemas/badRequestUnauthorized"
         "500":
           description: "Internal Server Error"
           content:
@@ -67,6 +67,543 @@ paths:
       security:
         - bearerAuth: []
 
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get Company Data"
+      description: "The /company endpoint is used to get a list of all companies within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., name, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within company data (e.g., name, city)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/companySchema"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /company/{companyId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get Company by ID"
+      description: "Retrieve a specific company by its ID."
+      parameters:
+        - name: companyId
+          in: path
+          description: ID of the company to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/companySchema"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+
+  /user:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new user"
+      description: "The /user endpoint is used to create a new user within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/User"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: "User Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of users"
+      description: "The /user endpoint is used to get a list of all users within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., username, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within user data (e.g., username, email)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /user/{userId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a user by ID"
+      description: "Retrieve a specific user by their ID."
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /branch:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new branch"
+      description: "The /branch endpoint is used to create a new branch within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Branch"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Branch"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Branch"
+      responses:
+        "201":
+          description: "Branch Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Branch"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of branches"
+      description: "The /branch endpoint is used to get a list of all branches within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., label, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within branch data (e.g., label, branchCity)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Branch"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /branch/{branchId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a branch by ID"
+      description: "Retrieve a specific branch by its ID."
+      parameters:
+        - name: branchId
+          in: path
+          description: ID of the branch to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Branch"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /category:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new category"
+      description: "The /category endpoint is used to create a new category within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Category"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Category"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Category"
+      responses:
+        "201":
+          description: "Category Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of categories"
+      description: "The /category endpoint is used to get a list of all categories within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., label, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within category data (e.g., label, branchName)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /category/{categoryId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a category by ID"
+      description: "Retrieve a specific category by its ID."
+      parameters:
+        - name: categoryId
+          in: path
+          description: ID of the category to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
 components:
   securitySchemes:
     bearerAuth:
@@ -240,29 +777,779 @@ components:
           required:
             - "Organization ID is required"
 
-    badRequest:
+    User:
       type: object
       properties:
+        _id:
+          type: string
+          description: Unique identifier for the user
+          example: "6628f3bd438e9ea436619bc3"
+        firebaseId:
+          type: string
+          description: Firebase ID of the user
+          example: "oa1zR2RystM2KpNI306UYstU4cy2"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the user was created
+          example: "2024-04-24T11:57:50.887Z"
+        username:
+          type: string
+          description: Username of the user
+          example: "123456789"
+          required:
+            - "Username is required"
+        emails:
+          type: array
+          items:
+            $ref: "#/components/schemas/Email"
+        profile:
+          $ref: "#/components/schemas/UserProfile"
         status:
           type: string
-          description: Status of the request
-          example: "400"
-        error:
+          description: Status of the user account
+          example: "ACTIVE"
+        isProcMaster:
+          type: boolean
+          description: Indicates if the user is a procurement master
+          example: false
+        isProcStar:
+          type: boolean
+          description: Indicates if the user is a procurement star
+          example: false
+        roles:
+          type: array
+          items:
+            type: string
+            description: Roles assigned to the user
+          example:
+            - "VENDOR-ADMIN"
+        branch:
+          type: array
+          items:
+            type: string
+            description: Branches associated with the user
+        orgId:
           type: string
-          description: Error message
-          example: "Bad Request - Missing Information"
+          description: Organization ID of the user
+          example: "trios"
 
-    unauthorized:
+    Email:
+      type: object
+      properties:
+        address:
+          type: string
+          description: Email address
+          example: "om.gaikwad@bc.in"
+        verified:
+          type: boolean
+          description: Indicates if the email is verified
+          example: true
+
+    UserProfile:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: First name of the user
+          example: "Om"
+        lastName:
+          type: string
+          description: Last name of the user
+          example: "Gaikwad"
+        companyId:
+          type: string
+          description: ID of the company associated with the user
+          example: "6628f3bc438e9ea436619bc2"
+        isCompleted:
+          type: boolean
+          description: Indicates if the user profile is completed
+          example: true
+        stepSeller:
+          type: string
+          description: Step of the seller registration process
+          example: "register/user"
+        verification:
+          $ref: "#/components/schemas/Verification"
+        notificationCount:
+          type: integer
+          description: Number of unread notifications for the user
+          example: 0
+        threads:
+          type: array
+          items:
+            type: string
+            description: IDs of the threads associated with the user
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the user profile was last modified
+          example: "2024-04-24T11:57:50.887Z"
+        hod:
+          type: boolean
+          description: Indicates if the user is a head of department
+          example: true
+
+    Verification:
+      type: object
+      properties:
+        isEmailVerified:
+          type: boolean
+          description: Indicates if the user's email is verified
+          example: true
+        isMobileVerified:
+          type: boolean
+          description: Indicates if the user's mobile number is verified
+          example: true
+        isUserVerified:
+          type: boolean
+          description: Indicates if the user is verified
+          example: true
+    Branch:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the branch
+          example: "657192d7222092494d31cdcd"
+        label:
+          type: string
+          description: Label or name of the branch
+          example: "NIKHIL CODING TEST BRANCH"
+        value:
+          type: string
+          description: Value or name of the branch
+          example: "NIKHIL CODING TEST BRANCH"
+        branchAddress:
+          type: string
+          description: Address of the branch
+          example: "AKASH GANGA COLONY"
+        branchPincode:
+          type: string
+          description: Pincode of the branch
+          example: "828109"
+        branchCity:
+          type: string
+          description: City of the branch
+          example: "Dhanbad"
+        branchState:
+          type: string
+          description: State of the branch
+          example: "Jharkhand"
+        branchCountry:
+          type: string
+          description: Country of the branch
+          example: "India"
+        branchGST:
+          type: string
+          description: GST number of the branch
+          example: "18"
+        branchLayout:
+          type: string
+          description: Layout of the branch
+          example: "NIKHIL TEST LAYOUT"
+        branchFacilities:
+          type: array
+          items:
+            type: string
+          description: List of facilities available in the branch
+          example:
+            - "Events"
+            - "Workdesk"
+            - "Signage Board "
+            - "Promotion Event"
+            - "Meeting Room"
+            - "Private Cabin"
+            - "Conference Room"
+            - "Deposit"
+            - "Food"
+            - "Virtual Office"
+            - "Signage"
+            - "Late payment fee"
+            - "Other Fines"
+            - "Storage Unit"
+            - "Floating Desk"
+            - "Documentation Assistance"
+            - "Recreational Area/Event Space"
+            - "Exit Charges"
+            - "IT Supplies"
+            - "Relieving Charges"
+            - "Convenience Fees"
+            - "Transportation"
+        status:
+          type: string
+          description: Status of the branch
+          example: "operational"
+        orgId:
+          type: string
+          description: Organization ID of the branch
+          example: "trios"
+        cityIdentifier:
+          type: string
+          description: City identifier of the branch
+          example: "PUN"
+        stateIdentifier:
+          type: string
+          description: State identifier of the branch
+          example: "MH"
+
+    Category:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the category
+          example: "662213b75a906a23aaff9cad"
+        label:
+          type: string
+          description: Label or name of the category
+          example: "f"
+        value:
+          type: string
+          description: Value or name of the category
+          example: "f"
+        categoryDescription:
+          type: string
+          description: Description of the category
+          example: "f"
+        branchId:
+          type: string
+          description: ID of the branch associated with the category
+          example: "662213a45a906a23aaff9cab"
+        branchName:
+          type: string
+          description: Name of the branch associated with the category
+          example: "f"
+        orgId:
+          type: string
+          description: Organization ID of the category
+          example: "trios"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the category was created
+          example: "2024-04-19T06:48:23.163Z"
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the category was last modified
+          example: "2024-04-19T06:49:53.271Z"
+        status:
+          type: string
+          description: Status of the category
+          example: "DELETED"
+
+    badRequestBadRequest:
       type: object
       properties:
         status:
           type: string
           description: Status of the request
-          example: "401"
+          example: "Bad Request"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 400
         error:
           type: string
           description: Error message
+          example: "Bad Request - Bad Request"
+
+    badRequestUnauthorized:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
           example: "Unauthorized"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 401
+        error:
+          type: string
+          description: Error message
+          example: "Bad Request - Unauthorized"
+
+    paymentRequired:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Payment Required"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 402
+        error:
+          type: string
+          description: Error message
+          example: "Payment Required"
+
+    forbidden:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Forbidden"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 403
+        error:
+          type: string
+          description: Error message
+          example: "Forbidden"
+
+    notFound:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Not Found"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 404
+        error:
+          type: string
+          description: Error message
+          example: "Not Found"
+
+    methodNotAllowed:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Method Not Allowed"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 405
+        error:
+          type: string
+          description: Error message
+          example: "Method Not Allowed"
+
+    notAcceptable:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Not Acceptable"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 406
+        error:
+          type: string
+          description: Error message
+          example: "Not Acceptable"
+
+    proxyAuthenticationRequired:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Proxy Authentication Required"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 407
+        error:
+          type: string
+          description: Error message
+          example: "Proxy Authentication Required"
+
+    requestTimeout:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Request Timeout"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 408
+        error:
+          type: string
+          description: Error message
+          example: "Request Timeout"
+
+    conflict:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Conflict"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 409
+        error:
+          type: string
+          description: Error message
+          example: "Conflict"
+
+    gone:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Gone"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 410
+        error:
+          type: string
+          description: Error message
+          example: "Gone"
+
+    lengthRequired:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Length Required"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 411
+        error:
+          type: string
+          description: Error message
+          example: "Length Required"
+
+    preconditionFailed:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Precondition Failed"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 412
+        error:
+          type: string
+          description: Error message
+          example: "Precondition Failed"
+
+    requestEntityTooLarge:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Request Entity Too Large"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 413
+        error:
+          type: string
+          description: Error message
+          example: "Request Entity Too Large"
+
+    requestURITooLong:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Request-URI Too Long"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 414
+        error:
+          type: string
+          description: Error message
+          example: "Request-URI Too Long"
+
+    unsupportedMediaType:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Unsupported Media Type"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 415
+        error:
+          type: string
+          description: Error message
+          example: "Unsupported Media Type"
+
+    requestedRangeNotSatisfiable:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Requested Range Not Satisfiable"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 416
+        error:
+          type: string
+          description: Error message
+          example: "Requested Range Not Satisfiable"
+
+    expectationFailed:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Expectation Failed"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 417
+        error:
+          type: string
+          description: Error message
+          example: "Expectation Failed"
+
+    imATeapot:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "I'm a teapot"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 418
+        error:
+          type: string
+          description: Error message
+          example: "I'm a teapot"
+
+    unprocessableEntity:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Unprocessable Entity"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 422
+        error:
+          type: string
+          description: Error message
+          example: "Unprocessable Entity"
+
+    locked:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Locked"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 423
+        error:
+          type: string
+          description: Error message
+          example: "Locked"
+
+    failedDependency:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Failed Dependency"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 424
+        error:
+          type: string
+          description: Error message
+          example: "Failed Dependency"
+
+    unorderedCollection:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Unordered Collection"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 425
+        error:
+          type: string
+          description: Error message
+          example: "Unordered Collection"
+
+    upgradeRequired:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Upgrade Required"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 426
+        error:
+          type: string
+          description: Error message
+          example: "Upgrade Required"
+
+    preconditionRequired:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Precondition Required"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 428
+        error:
+          type: string
+          description: Error message
+          example: "Precondition Required"
+
+    tooManyRequests:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Too Many Requests"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 429
+        error:
+          type: string
+          description: Error message
+          example: "Too Many Requests"
+
+    requestHeaderFieldsTooLarge:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Request Header Fields Too Large"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 431
+        error:
+          type: string
+          description: Error message
+          example: "Request Header Fields Too Large"
+
+    noResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "No Response"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 444
+        error:
+          type: string
+          description: Error message
+          example: "No Response"
+
+    retryWith:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Retry With"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 449
+        error:
+          type: string
+          description: Error message
+          example: "Retry With"
+
+    blockedByWindowsParentalControls:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Blocked By Windows Parental Controls"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 450
+        error:
+          type: string
+          description: Error message
+          example: "Blocked By Windows Parental Controls"
+
+    unavailableForLegalReasons:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Unavailable For Legal Reasons"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 451
+        error:
+          type: string
+          description: Error message
+          example: "Unavailable For Legal Reasons"
+
+    clientClosedRequest:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+          example: "Client Closed Request"
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 499
+        error:
+          type: string
+          description: Error message
+          example: "Client Closed Request"
 
     internalServerErrror:
       type: object

@@ -1,0 +1,522 @@
+components:
+  badRequestBadRequest:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Bad Request"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 400
+      error:
+        type: string
+        description: Error message
+        example: "Bad Request - Bad Request"
+
+  badRequestUnauthorized:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Unauthorized"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 401
+      error:
+        type: string
+        description: Error message
+        example: "Bad Request - Unauthorized"
+  paymentRequired:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Payment Required"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 402
+      error:
+        type: string
+        description: Error message
+        example: "Payment Required"
+
+  forbidden:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Forbidden"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 403
+      error:
+        type: string
+        description: Error message
+        example: "Forbidden"
+
+  notFound:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Not Found"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 404
+      error:
+        type: string
+        description: Error message
+        example: "Not Found"
+
+  methodNotAllowed:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Method Not Allowed"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 405
+      error:
+        type: string
+        description: Error message
+        example: "Method Not Allowed"
+
+  notAcceptable:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Not Acceptable"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 406
+      error:
+        type: string
+        description: Error message
+        example: "Not Acceptable"
+
+  proxyAuthenticationRequired:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Proxy Authentication Required"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 407
+      error:
+        type: string
+        description: Error message
+        example: "Proxy Authentication Required"
+  requestTimeout:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Request Timeout"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 408
+      error:
+        type: string
+        description: Error message
+        example: "Request Timeout"
+
+  conflict:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Conflict"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 409
+      error:
+        type: string
+        description: Error message
+        example: "Conflict"
+
+  gone:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Gone"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 410
+      error:
+        type: string
+        description: Error message
+        example: "Gone"
+
+  lengthRequired:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Length Required"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 411
+      error:
+        type: string
+        description: Error message
+        example: "Length Required"
+
+  preconditionFailed:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Precondition Failed"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 412
+      error:
+        type: string
+        description: Error message
+        example: "Precondition Failed"
+
+  requestEntityTooLarge:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Request Entity Too Large"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 413
+      error:
+        type: string
+        description: Error message
+        example: "Request Entity Too Large"
+
+  requestURITooLong:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Request-URI Too Long"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 414
+      error:
+        type: string
+        description: Error message
+        example: "Request-URI Too Long"
+
+  unsupportedMediaType:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Unsupported Media Type"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 415
+      error:
+        type: string
+        description: Error message
+        example: "Unsupported Media Type"
+
+  requestedRangeNotSatisfiable:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Requested Range Not Satisfiable"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 416
+      error:
+        type: string
+        description: Error message
+        example: "Requested Range Not Satisfiable"
+
+  expectationFailed:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Expectation Failed"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 417
+      error:
+        type: string
+        description: Error message
+        example: "Expectation Failed"
+
+  imATeapot:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "I'm a teapot"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 418
+      error:
+        type: string
+        description: Error message
+        example: "I'm a teapot"
+
+  unprocessableEntity:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Unprocessable Entity"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 422
+      error:
+        type: string
+        description: Error message
+        example: "Unprocessable Entity"
+
+  locked:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Locked"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 423
+      error:
+        type: string
+        description: Error message
+        example: "Locked"
+
+  failedDependency:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Failed Dependency"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 424
+      error:
+        type: string
+        description: Error message
+        example: "Failed Dependency"
+
+  unorderedCollection:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Unordered Collection"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 425
+      error:
+        type: string
+        description: Error message
+        example: "Unordered Collection"
+
+  upgradeRequired:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Upgrade Required"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 426
+      error:
+        type: string
+        description: Error message
+        example: "Upgrade Required"
+
+  preconditionRequired:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Precondition Required"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 428
+      error:
+        type: string
+        description: Error message
+        example: "Precondition Required"
+
+  tooManyRequests:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Too Many Requests"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 429
+      error:
+        type: string
+        description: Error message
+        example: "Too Many Requests"
+
+  requestHeaderFieldsTooLarge:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Request Header Fields Too Large"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 431
+      error:
+        type: string
+        description: Error message
+        example: "Request Header Fields Too Large"
+
+  noResponse:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "No Response"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 444
+      error:
+        type: string
+        description: Error message
+        example: "No Response"
+
+  retryWith:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Retry With"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 449
+      error:
+        type: string
+        description: Error message
+        example: "Retry With"
+
+  blockedByWindowsParentalControls:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Blocked By Windows Parental Controls"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 450
+      error:
+        type: string
+        description: Error message
+        example: "Blocked By Windows Parental Controls"
+
+  unavailableForLegalReasons:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Unavailable For Legal Reasons"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 451
+      error:
+        type: string
+        description: Error message
+        example: "Unavailable For Legal Reasons"
+
+  clientClosedRequest:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "Client Closed Request"
+      statusCode:
+        type: integer
+        description: HTTP status code
+        example: 499
+      error:
+        type: string
+        description: Error message
+        example: "Client Closed Request"
+
+  internalServerErrror:
+    type: object
+    properties:
+      status:
+        type: string
+        description: Status of the request
+        example: "500"
+      error:
+        type: string
+        description: Error message
+        example: "Internal Server Error"
