@@ -604,6 +604,588 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
+
+  /product:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new product"
+      description: "The /product endpoint is used to create a new product within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Product"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        "201":
+          description: "Product Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of products"
+      description: "The /product endpoint is used to get a list of all products within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., name, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within product data (e.g., name, branchName)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /product/{productId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a product by ID"
+      description: "Retrieve a specific product by its ID."
+      parameters:
+        - name: productId
+          in: path
+          description: ID of the product to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /rateContract:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new rate contract"
+      description: "The /rateContract endpoint is used to create a new rate contract within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+      responses:
+        "201":
+          description: "Rate Contract Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RateContract"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of rate contracts"
+      description: "The /rateContract endpoint is used to get a list of all rate contracts within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., productName, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within rate contract data (e.g., productName, branchName)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RateContract"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /rateContract/{rateContractId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a rate contract by ID"
+      description: "Retrieve a specific rate contract by its ID."
+      parameters:
+        - name: rateContractId
+          in: path
+          description: ID of the rate contract to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RateContract"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+
+  /agreement:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new agreement"
+      description: "The /agreement endpoint is used to create a new agreement within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+      responses:
+        "201":
+          description: "Agreement Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Agreement"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of agreements"
+      description: "The /agreement endpoint is used to get a list of all agreements within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., branchName, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within agreement data (e.g., branchName, status)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Agreement"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /agreement/{agreementId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get an agreement by ID"
+      description: "Retrieve a specific agreement by its ID."
+      parameters:
+        - name: agreementId
+          in: path
+          description: ID of the agreement to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Agreement"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /invoice:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new invoice"
+      description: "The /invoice endpoint is used to create a new invoice within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Invoice"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Invoice"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Invoice"
+      responses:
+        "201":
+          description: "Invoice Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Invoice"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of invoices"
+      description: "The /invoice endpoint is used to get a list of all invoices within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., invoiceNumber, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within invoice data (e.g., invoiceNumber, userId)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Invoice"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /invoice/{invoiceId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get an invoice by ID"
+      description: "Retrieve a specific invoice by its ID."
+      parameters:
+        - name: invoiceId
+          in: path
+          description: ID of the invoice to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Invoice"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
 components:
   securitySchemes:
     bearerAuth:
@@ -1039,6 +1621,557 @@ components:
           description: Status of the category
           example: "DELETED"
 
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the product
+          example: "66139a212c6b68e0012a9f46"
+        categoryId:
+          type: string
+          description: ID of the category associated with the product
+          example: "66139a052c6b68e0012a9f45"
+        categoryName:
+          type: string
+          description: Name of the category associated with the product
+          example: "Workdesk"
+        branchId:
+          type: string
+          description: ID of the branch associated with the product
+          example: "661399c0438a93b4d729221b"
+        branchName:
+          type: string
+          description: Name of the branch associated with the product
+          example: "TRIOS Lonavala"
+        brands:
+          type: array
+          items:
+            type: string
+          description: List of brands associated with the product
+        isPrimary:
+          type: integer
+          description: Indicates if the product is primary
+          example: 1
+        keywords:
+          type: string
+          description: Keywords related to the product
+        name:
+          type: string
+          description: Name of the product
+          example: "WorkDesk"
+        primaryProductId:
+          type: string
+          description: ID of the primary product
+        priceRange:
+          type: string
+          description: Price range of the product
+        productSerial:
+          type: string
+          description: Serial number of the product
+          example: "0000000"
+        productSpecifications:
+          type: array
+          items:
+            type: object
+            properties:
+              productDescription:
+                type: string
+                description: Description of the product
+          description: Specifications of the product
+          example:
+            - productDescription: "Work desk"
+        productType:
+          type: string
+          description: Type of the product
+          example: "RECURRING"
+        refundPolicy:
+          type: string
+          description: Refund policy for the product
+          example: "NONREFUNDABLE"
+        refundType:
+          type: string
+          description: Type of refund for the product
+          example: "NONREFUNDABLE"
+        tax:
+          type: number
+          description: Tax percentage applied to the product
+          example: 18
+        taxType:
+          type: string
+          description: Type of tax applied to the product
+          example: "GST"
+        agreementProduct:
+          type: boolean
+          description: Indicates if the product is an agreement product
+        orgId:
+          type: string
+          description: Organization ID of the product
+          example: "trios"
+        createdAt:
+          type: string
+    RateContract:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the rate contract
+          example: "6620cf4a92a997d8da356ba3"
+        buyerId:
+          type: string
+          description: ID of the buyer associated with the rate contract
+          example: "656dae8feffea0d163b95b34"
+        companyId:
+          type: string
+          description: ID of the company associated with the rate contract
+          example: "656dae8deffea0d163b95b33"
+        productId:
+          type: string
+          description: ID of the product associated with the rate contract
+          example: "6620cb8bc6835e239d460ef3"
+        productName:
+          type: string
+          description: Name of the product associated with the rate contract
+          example: "NEW CATEGORY NEW PRODUCT"
+        productPrice:
+          type: number
+          description: Price of the product
+          example: 1000
+        quantity:
+          type: integer
+          description: Quantity of the product
+          example: 1
+        tax:
+          type: number
+          description: Tax percentage applied to the product
+          example: 18
+        sellerUnitPrice:
+          type: number
+          description: Unit price of the product for the seller
+          example: null
+        commission:
+          type: number
+          description: Commission for the seller
+          example: null
+        taxType:
+          type: string
+          description: Type of tax applied to the product
+          example: "GST"
+        startDate:
+          type: string
+          format: date-time
+          description: Start date of the rate contract
+          example: "2024-04-17T18:30:00.000Z"
+        endDate:
+          type: string
+          format: date-time
+          description: End date of the rate contract
+          example: "2024-04-29T18:30:00.000Z"
+        validityDate:
+          type: string
+          format: date-time
+          description: Validity date of the rate contract
+          example: "2024-04-29T18:30:00.000Z"
+        unit:
+          type: string
+          description: Unit of the product
+          example: "Nos."
+        requirementId:
+          type: string
+          description: ID of the requirement associated with the rate contract
+          example: "1"
+        serialNumber:
+          type: string
+          description: Serial number of the product
+          example: "0"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the rate contract was created
+          example: "2024-04-18T07:44:10.300Z"
+        procmartState:
+          type: string
+          description: State of the rate contract in the procurement process
+          example: null
+        productSpecifications:
+          type: string
+          description: Specifications of the product
+          example: null
+        refundType:
+          type: string
+          description: Type of refund for the product
+          example: "NONREFUNDABLE"
+        productType:
+          type: string
+          description: Type of the product
+          example: "RECURRING"
+        branchName:
+          type: string
+          description: Name of the branch associated with the rate contract
+          example: "NEW BRANCH 3"
+        branchId:
+          type: string
+          description: ID of the branch associated with the rate contract
+          example: "6620c770c6835e239d460ef2"
+        orgId:
+          type: string
+          description: Organization ID of the rate contract
+          example: "trios"
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the rate contract was last modified
+          example: "2024-04-18T07:48:47.328Z"
+    Agreement:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the agreement
+          example: "65d49b6d1c272f97cab8bba6"
+        companyId:
+          type: string
+          description: ID of the company associated with the agreement
+          example: "25RM7NfaxPqriey9n"
+        branchId:
+          type: string
+          description: ID of the branch associated with the agreement
+          example: "659b9c0f1dd34e2463c5d318"
+        branchName:
+          type: string
+          description: Name of the branch associated with the agreement
+          example: "Nikhil Pvt Ltd Branch test"
+        branch:
+          type: string
+          description: Branch name
+          example: "Nikhil Pvt Ltd Branch test"
+        draftEntity:
+          type: array
+          items:
+            type: object
+            properties:
+              startDate:
+                type: string
+                format: date-time
+                description: Start date of the draft entity
+              endDate:
+                type: string
+                format: date-time
+                description: End date of the draft entity
+              productType:
+                type: string
+                description: Type of the product in the draft entity
+              quantity:
+                type: integer
+                description: Quantity of the product in the draft entity
+              standardPrice:
+                type: number
+                description: Standard price of the product in the draft entity
+              unitPrice:
+                type: number
+                description: Unit price of the product in the draft entity
+              billingType:
+                type: string
+                description: Billing type for the draft entity
+              officeHours:
+                type: string
+                description: Office hours for the draft entity
+              productId:
+                type: string
+                description: ID of the product in the draft entity
+          description: Draft entity details
+        deposit:
+          type: number
+          description: Deposit amount
+          example: 100
+        lockIn:
+          type: string
+          description: Lock-in period
+          example: "Eight"
+        rentalAnnualIncrementPercent:
+          type: string
+          description: Rental annual increment percentage
+          example: "5"
+        noticePeriod:
+          type: string
+          description: Notice period
+          example: "Three"
+        conferenceRoomUsageHours:
+          type: integer
+          description: Conference room usage hours
+          example: 1
+        conferenceRoomExtraChargesPerHour:
+          type: integer
+          description: Extra charges per hour for conference room usage
+          example: 1
+        workstationNumbers:
+          type: string
+          description: Number of workstations
+          example: "1"
+        paymentDueDate:
+          type: string
+          description: Payment due date
+          example: "10th business day"
+        status:
+          type: string
+          description: Status of the agreement
+          example: "APPROVED"
+        specialArrangements:
+          type: array
+          items:
+            type: object
+            properties:
+              term:
+                type: string
+                description: Special arrangement term
+                example: "1"
+        orgId:
+          type: string
+          description: Organization ID of the agreement
+          example: "trios"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the agreement was created
+          example: "2024-02-20T12:30:37.102Z"
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the agreement was last modified
+          example: "2024-02-23T09:54:18.664Z"
+        supportingDocs:
+          type: array
+          items:
+            type: object
+            properties:
+              documentUrl:
+                type: string
+                description: URL of the supporting document
+                example: "https://triosplus-staging.s3.ap-south-1.amazonaws.com/25RM7NfaxPqriey9n/agreement-documents/individualAadharCard.jpeg"
+              name:
+                type: string
+                description: Name of the supporting document
+                example: "applications-of-ai-how-ai-is-being-used-in-2023 (1).jpeg"
+              size:
+                type: string
+                description: Size of the supporting document
+                example: "130.72 KB"
+              type:
+                type: string
+                description: Type of the supporting document
+                example: "jpeg"
+              upLoadedAt:
+                type: string
+                format: date-time
+                description: Timestamp of when the supporting document was uploaded
+                example: "2024-02-23T09:54:11.872Z"
+    Invoice:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the invoice
+          example: "6629e8b8f61fc3439800ddde"
+        status:
+          type: string
+          description: Status of the invoice
+          example: "New"
+        invoiceNumber:
+          type: string
+          description: Invoice number
+          example: "MH/PUN/1410"
+        poDetails:
+          type: string
+          description: Purchase order details
+          example: ""
+        poNumber:
+          type: string
+          description: Purchase order number
+          example: ""
+        userId:
+          type: string
+          description: ID of the user associated with the invoice
+          example: "Pz2WDEsNLj7kzJq3d"
+        companyId:
+          type: string
+          description: ID of the company associated with the invoice
+          example: "27QfHoPAro3wLzC2C"
+        individualReqObj:
+          type: array
+          items:
+            type: object
+            properties:
+              product:
+                type: string
+                description: Name of the product
+              quantity:
+                type: integer
+                description: Quantity of the product
+              unitPrice:
+                type: number
+                description: Unit price of the product
+              totalPrice:
+                type: number
+                description: Total price of the product
+              totalPriceBeforeTax:
+                type: number
+                description: Total price of the product before tax
+              taxation:
+                type: number
+                description: Tax percentage
+              CGST:
+                type: number
+                description: CGST percentage
+              SGST:
+                type: number
+                description: SGST percentage
+              IGST:
+                type: number
+                description: IGST percentage
+              CGSTVal:
+                type: number
+                description: CGST value
+              SGSTVal:
+                type: number
+                description: SGST value
+              IGSTVal:
+                type: number
+                description: IGST value
+              specifications:
+                type: string
+                description: Specifications of the product
+              rateContractId:
+                type: string
+                description: ID of the rate contract
+              unit:
+                type: string
+                description: Unit of the product
+              requirementId:
+                type: string
+                description: ID of the requirement
+              orgId:
+                type: string
+                description: Organization ID
+        totalPriceBeforeTax:
+          type: number
+          description: Total price of the invoice before tax
+          example: 101
+        taxation:
+          type: number
+          description: Total tax percentage
+          example: 18.18
+        CGST:
+          type: number
+          description: CGST percentage
+          example: 9.09
+        SGST:
+          type: number
+          description: SGST percentage
+          example: 9.09
+        IGST:
+          type: number
+          description: IGST percentage
+          example: 0
+        totalPrice:
+          type: number
+          description: Total price of the invoice
+          example: 120
+        logisticsChargeOption:
+          type: array
+          items:
+            type: string
+        amountPayble:
+          type: number
+          description: Amount payable
+          example: 120
+        procmartState:
+          type: string
+          description: State of the invoice in the procurement process
+          example: ""
+        buyerTaxType:
+          type: string
+          description: Tax type for the buyer
+          example: "GST"
+        amountDue:
+          type: number
+          description: Amount due
+          example: 120
+        amountPaid:
+          type: number
+          description: Amount paid
+          example: 0
+        shipmentAddress:
+          type: object
+          properties:
+            address:
+              type: string
+              description: Shipment address
+              example: "Pune"
+            pincode:
+              type: integer
+              description: Shipment address pincode
+              example: 411045
+            city:
+              type: string
+              description: Shipment address city
+              example: "Pune City"
+            state:
+              type: string
+              description: Shipment address state
+              example: "MAHARASHTRA"
+        billingAddress:
+          type: object
+          properties:
+            address:
+              type: string
+              description: Billing address
+              example: "Viman Nagar"
+            pincode:
+              type: string
+              description: Billing address pincode
+              example: "411014"
+            city:
+              type: string
+              description: Billing address city
+              example: "Pune City"
+            state:
+              type: string
+              description: Billing address state
+              example: "MAHARASHTRA"
+        tds:
+          type: number
+          description: TDS amount
+          example: 0
+        invoiceNotes:
+          type: string
+          description: Invoice notes
+          example: ""
+        invoiceStatus:
+          type: string
+          description: Status of the invoice
+          example: "generated"
+        branchName:
+          type: string
+          description: Name of the branch
+          example: "Balewadi-Pune"
+        orgId:
+          type: string
+          description: Organization ID
+          example: "trios"
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the invoice was created
+          example: "2024-04-25T05:23:04.602Z"
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the invoice was last modified
+          example: "2024-04-25T05:23:04.642Z"
+        branchId:
+          type: string
+          description: ID of the branch
+          example: "FQuZnPwxHtY3JXKYt"
     badRequestBadRequest:
       type: object
       properties:
