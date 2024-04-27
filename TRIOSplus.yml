@@ -168,7 +168,56 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
-
+    put:
+      tags:
+        - Trios Plus
+      summary: "Update Company by ID"
+      description: "Update a specific company by its ID."
+      parameters:
+        - name: companyId
+          in: path
+          description: ID of the company to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/companySchema"
+      responses:
+        "200":
+          description: "Company Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/companySchema"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
   /user:
     post:
       tags:
@@ -290,6 +339,56 @@ paths:
       responses:
         "200":
           description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update a user by ID"
+      description: "The /user/{userId} endpoint is used to edit or update a specific user by their ID."
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/User"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: "User Edited/Updated Successfully"
           content:
             application/json:
               schema:
@@ -459,6 +558,56 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Update a branch by ID"
+      description: "Update a specific branch by its ID."
+      parameters:
+        - name: branchId
+          in: path
+          description: ID of the branch to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Branch"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Branch"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Branch"
+      responses:
+        "200":
+          description: "Branch Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Branch"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
   /category:
     post:
       tags:
@@ -604,7 +753,56 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
-
+    put:
+      tags:
+        - Trios Plus
+      summary: "Update a category by ID"
+      description: "Update a specific category by its ID."
+      parameters:
+        - name: categoryId
+          in: path
+          description: ID of the category to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Category"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Category"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Category"
+      responses:
+        "200":
+          description: "Category Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
   /product:
     post:
       tags:
@@ -750,6 +948,56 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Update a product by ID"
+      description: "Update a specific product by its ID."
+      parameters:
+        - name: productId
+          in: path
+          description: ID of the product to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Product"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        "200":
+          description: "Product Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
   /rateContract:
     post:
       tags:
@@ -871,6 +1119,56 @@ paths:
       responses:
         "200":
           description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RateContract"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Update a rate contract by ID"
+      description: "Update a specific rate contract by its ID."
+      parameters:
+        - name: rateContractId
+          in: path
+          description: ID of the rate contract to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/RateContract"
+      responses:
+        "200":
+          description: "Rate Contract Updated"
           content:
             application/json:
               schema:
@@ -1041,6 +1339,56 @@ paths:
                 $ref: "#/components/schemas/internalServerErrror"
       security:
         - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an agreement by ID"
+      description: "Edit or update a specific agreement by its ID."
+      parameters:
+        - name: agreementId
+          in: path
+          description: ID of the agreement to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Agreement"
+      responses:
+        "200":
+          description: "Agreement Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Agreement"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
   /invoice:
     post:
       tags:
@@ -1051,13 +1399,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Invoice"
+              $ref: "#/components/schemas/NewInvoice"
           application/xml:
             schema:
-              $ref: "#/components/schemas/Invoice"
+              $ref: "#/components/schemas/NewInvoice"
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Invoice"
+              $ref: "#/components/schemas/NewInvoice"
       responses:
         "201":
           description: "Invoice Created"
@@ -1166,6 +1514,381 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Invoice"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing invoice"
+      description: "The /invoice/{invoiceId} endpoint is used to edit or update an existing invoice by its ID."
+      parameters:
+        - name: invoiceId
+          in: path
+          description: ID of the invoice to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditInvoice"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/EditInvoice"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/EditInvoice"
+      responses:
+        "200":
+          description: "Invoice Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Invoice"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /invoice/payment:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new invoice payment"
+      description: "This endpoint is used to create a new invoice payment for tracking purposes."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+      responses:
+        "201":
+          description: "Invoice Payment Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InvoicePayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of invoice payments"
+      description: "Retrieve a list of all invoice payments within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within invoice payment data
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/InvoicePayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /invoice/payment/{paymentId}:
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing invoice payment"
+      description: "Update an existing invoice payment by its ID."
+      parameters:
+        - name: paymentId
+          in: path
+          description: ID of the invoice payment to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/InvoicePayment"
+      responses:
+        "200":
+          description: "Invoice Payment Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InvoicePayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get an invoice payment by ID"
+      description: "Retrieve a specific invoice payment by its ID."
+      parameters:
+        - name: paymentId
+          in: path
+          description: ID of the invoice payment to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InvoicePayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+
+  /bulkInvoiceGenerations:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of rate contracts for bulk invoice generation"
+      description: "Retrieve a list of rate contracts with product type 'RECURRING' that fall within the specified start and end dates."
+      parameters:
+        - name: productType
+          description: Product type must be Recurring
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - "RECURRING"
+        - name: startDate
+          in: query
+          description: Start date for the rate contract
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: endDate
+          in: query
+          description: End date for the rate contract
+          required: true
+          schema:
+            type: string
+            format: date
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RateContract"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerErrror"
+      security:
+        - bearerAuth: []
+  /invoices/canceled:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get Invoices with Status DELETED"
+      description: "Retrieve a list of invoices with a status of 'DELETED'."
+      parameters:
+        - name: status
+          in: query
+          description: Fetch canceled invoices with status
+          required: true
+          schema:
+            type: string
+            default: "DELETED"
+            enum:
+              - "DELETED"
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., invoiceNumber, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within invoice data (e.g., invoiceNumber, userId)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Invoice"
         "400":
           description: "Bad Request"
           content:
@@ -2172,6 +2895,131 @@ components:
           type: string
           description: ID of the branch
           example: "FQuZnPwxHtY3JXKYt"
+    NewInvoice:
+      type: object
+      properties:
+        rateContractData:
+          type: array
+          items:
+            $ref: "#/components/schemas/InvoiceProductAgreement"
+        address:
+          type: string
+          description: Address for the invoice
+        poDetails:
+          type: string
+          description: Purchase order details
+        invoiceNotes:
+          type: string
+          description: Invoice notes
+        companyId:
+          type: string
+          description: ID of the company associated with the invoice
+        userId:
+          type: string
+          description: ID of the user associated with the invoice
+        paidStatus:
+          type: string
+          description: Paid status of the invoice
+          example: "UN-PAID"
+
+    EditInvoice:
+      type: object
+      properties:
+        invoiceId:
+          type: string
+          description: ID of the invoice to be edited
+        rateContractData:
+          type: array
+          items:
+            $ref: "#/components/schemas/InvoiceProductAgreement"
+        address:
+          type: string
+          description: Address for the invoice
+        poDetails:
+          type: string
+          description: Purchase order details
+        invoiceNotes:
+          type: string
+          description: Invoice notes
+        companyId:
+          type: string
+          description: ID of the company associated with the invoice
+        userId:
+          type: string
+          description: ID of the user associated with the invoice
+        paidStatus:
+          type: string
+          description: Paid status of the invoice
+          example: "UN-PAID"
+
+    UpdatePaidInvoice:
+      type: object
+      properties:
+        invoiceId:
+          type: string
+          description: ID of the invoice to be updated
+        rateContractData:
+          type: array
+          items:
+            $ref: "#/components/schemas/InvoiceProductAgreement"
+        address:
+          type: string
+          description: Address for the invoice
+        poDetails:
+          type: string
+          description: Purchase order details
+        invoiceNotes:
+          type: string
+          description: Invoice notes
+        companyId:
+          type: string
+          description: ID of the company associated with the invoice
+        userId:
+          type: string
+          description: ID of the user associated with the invoice
+        paidStatus:
+          type: string
+          description: Paid status of the invoice
+          example: "PAID"
+
+    InvoiceProductAgreement:
+      type: object
+      properties:
+        rateContractId:
+          type: string
+          description: ID of the rate contract
+        quantity:
+          type: integer
+          description: Quantity of the product
+        specifications:
+          type: string
+          description: Specifications of the product
+    InvoicePayment:
+      type: object
+      properties:
+        invoiceId:
+          type: string
+        amount:
+          type: number
+        tds:
+          type: number
+        baseAmount:
+          type: number
+        paymentMethod:
+          type: string
+        notes:
+          type: string
+        amountPayable:
+          type: number
+        amountDue:
+          type: number
+        amountPaid:
+          type: number
+        orgId:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
     badRequestBadRequest:
       type: object
       properties:
