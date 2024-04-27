@@ -63,7 +63,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
 
@@ -125,7 +125,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /company/{companyId}:
@@ -165,7 +165,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -215,7 +215,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /user:
@@ -259,7 +259,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -320,7 +320,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /user/{userId}:
@@ -360,7 +360,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -410,7 +410,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /branch:
@@ -454,7 +454,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -515,7 +515,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /branch/{branchId}:
@@ -555,7 +555,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -605,7 +605,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /category:
@@ -649,7 +649,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -710,7 +710,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /category/{categoryId}:
@@ -750,7 +750,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -800,7 +800,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /product:
@@ -844,7 +844,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -905,7 +905,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /product/{productId}:
@@ -945,7 +945,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -995,7 +995,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /rateContract:
@@ -1039,7 +1039,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -1100,7 +1100,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /rateContract/{rateContractId}:
@@ -1140,7 +1140,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -1190,7 +1190,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
 
@@ -1235,7 +1235,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -1296,7 +1296,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /agreement/{agreementId}:
@@ -1336,7 +1336,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -1386,7 +1386,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /invoice:
@@ -1430,7 +1430,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -1491,7 +1491,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /invoice/{invoiceId}:
@@ -1531,7 +1531,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     put:
@@ -1581,7 +1581,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /invoice/payment:
@@ -1625,7 +1625,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -1686,7 +1686,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /invoice/payment/{paymentId}:
@@ -1737,7 +1737,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
     get:
@@ -1776,7 +1776,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
 
@@ -1835,7 +1835,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
   /invoices/canceled:
@@ -1906,9 +1906,1302 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internalServerErrror"
+                $ref: "#/components/schemas/internalServerError"
       security:
         - bearerAuth: []
+  /ticket:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new ticket"
+      description: "The /ticket endpoint is used to create a new ticket within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+      responses:
+        "201":
+          description: "Ticket Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of tickets"
+      description: "The /ticket endpoint is used to get a list of all tickets within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., ticketNo, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within ticket data (e.g., title, description)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Ticket"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /ticket/{ticketId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a ticket by ID"
+      description: "Retrieve a specific ticket by its ID."
+      parameters:
+        - name: ticketId
+          in: path
+          description: ID of the ticket to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing ticket"
+      description: "Update an existing ticket by its ID."
+      parameters:
+        - name: ticketId
+          in: path
+          description: ID of the ticket to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Ticket"
+      responses:
+        "200":
+          description: "Ticket Updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+
+  /ticket-histories:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new ticket history entry"
+      description: "The /ticket/history endpoint is used to create a new entry in the ticket history."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TicketHistory"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/TicketHistory"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/TicketHistory"
+      responses:
+        "201":
+          description: "Ticket History Entry Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TicketHistory"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get ticket history entries"
+      description: "The /ticket/history endpoint is used to get a list of all ticket history entries."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., createdAt, updatedStatus)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within ticket history data (e.g., updatedStatus, createdBy)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TicketHistory"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+
+  /purchase-request:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new purchase request"
+      description: "The /purchase-request endpoint is used to create a new purchase request within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+      responses:
+        "201":
+          description: "Purchase Request Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseRequest"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of purchase requests"
+      description: "The /purchase-request endpoint is used to get a list of all purchase requests within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., purchaseRequestNumber, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within purchase request data (e.g., productName, status)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PurchaseRequest"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /purchase-request/{purchaseRequestId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a purchase request by ID"
+      description: "Retrieve a specific purchase request by its ID."
+      parameters:
+        - name: purchaseRequestId
+          in: path
+          description: ID of the purchase request to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseRequest"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing purchase request"
+      description: "The /purchase-request/{purchaseRequestId} endpoint is used to edit or update an existing purchase request by its ID."
+      parameters:
+        - name: purchaseRequestId
+          in: path
+          description: ID of the purchase request to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseRequest"
+      responses:
+        "200":
+          description: "Purchase Request Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseRequest"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /purchase-orders:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new purchase order"
+      description: "The /purchase-orders endpoint is used to create a new purchase order within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+      responses:
+        "201":
+          description: "Purchase Order Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseOrder"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of purchase orders"
+      description: "The /purchase-orders endpoint is used to get a list of all purchase orders within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., purchaseOrderNumber, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within purchase order data (e.g., purchaseOrderNumber, vendorId)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PurchaseOrder"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /purchase-orders/{purchaseOrderId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a purchase order by ID"
+      description: "Retrieve a specific purchase order by its ID."
+      parameters:
+        - name: purchaseOrderId
+          in: path
+          description: ID of the purchase order to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseOrder"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing purchase order"
+      description: "The /purchase-orders/{purchaseOrderId} endpoint is used to edit or update an existing purchase order by its ID."
+      parameters:
+        - name: purchaseOrderId
+          in: path
+          description: ID of the purchase order to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrder"
+      responses:
+        "200":
+          description: "Purchase Order Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseOrder"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /purchase-orders/payments:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new purchase payment"
+      description: "The /purchase-payments endpoint is used to create a new purchase payment within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderPayment"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderPayment"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderPayment"
+      responses:
+        "201":
+          description: "Purchase Payment Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseOrderPayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of purchase payments"
+      description: "The /purchase-payments endpoint is used to get a list of all purchase payments within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., createdAt, purchaseOrderId)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within purchase payment data (e.g., purchaseOrderId, paymentMethod)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PurchaseOrderPayment"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /purchase-order-histories:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new purchase order history entry"
+      description: "The /purchase-order-histories endpoint is used to create a new entry in the purchase order history within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderHistory"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderHistory"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/PurchaseOrderHistory"
+      responses:
+        "201":
+          description: "Purchase Order History Entry Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PurchaseOrderHistory"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of purchase order history entries"
+      description: "The /purchase-order-histories endpoint is used to get a list of all entries in the purchase order history within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., createdAt, purchaseOrderId)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within purchase order history data (e.g., purchaseOrderId, updatedStatus)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PurchaseOrderHistory"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /quotations:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new quotation"
+      description: "The /quotations endpoint is used to create a new quotation within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+      responses:
+        "201":
+          description: "Quotation Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quotation"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of quotations"
+      description: "The /quotations endpoint is used to get a list of all quotations within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., quotationNumber, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within quotation data (e.g., quotationNumber, vendorId)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Quotation"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /quotations/{quotationId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a quotation by ID"
+      description: "Retrieve a specific quotation by its ID."
+      parameters:
+        - name: quotationId
+          in: path
+          description: ID of the quotation to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quotation"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing quotation"
+      description: "The /quotations/{quotationId} endpoint is used to edit or update an existing quotation by its ID."
+      parameters:
+        - name: quotationId
+          in: path
+          description: ID of the quotation to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Quotation"
+      responses:
+        "200":
+          description: "Quotation Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quotation"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /assets:
+    post:
+      tags:
+        - Trios Plus
+      summary: "Create a new asset"
+      description: "The /assets endpoint is used to create a new asset within the system."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Asset"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Asset"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Asset"
+      responses:
+        "201":
+          description: "Asset Created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get a list of assets"
+      description: "The /assets endpoint is used to get a list of all assets within the system."
+      parameters:
+        - name: limit
+          in: query
+          description: Number of results to return per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          description: Sort the results based on a specific field (e.g., name, createdAt)
+          required: false
+          schema:
+            type: string
+            default: createdAt
+        - name: searchKey
+          in: query
+          description: Key to search within asset data (e.g., name, branchName)
+          required: false
+          schema:
+            type: string
+        - name: searchValue
+          in: query
+          description: Value to search for based on the specified searchKey
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Asset"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+  /assets/{assetId}:
+    get:
+      tags:
+        - Trios Plus
+      summary: "Get an asset by ID"
+      description: "Retrieve a specific asset by its ID."
+      parameters:
+        - name: assetId
+          in: path
+          description: ID of the asset to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+    put:
+      tags:
+        - Trios Plus
+      summary: "Edit or Update an existing asset"
+      description: "The /assets/{assetId} endpoint is used to edit or update an existing asset by its ID."
+      parameters:
+        - name: assetId
+          in: path
+          description: ID of the asset to edit or update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Asset"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/Asset"
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Asset"
+      responses:
+        "200":
+          description: "Asset Edited/Updated Successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestBadRequest"
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/badRequestUnauthorized"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internalServerError"
+      security:
+        - bearerAuth: []
+
 components:
   securitySchemes:
     bearerAuth:
@@ -3020,6 +4313,675 @@ components:
         createdAt:
           type: string
           format: date-time
+    Ticket:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the ticket
+        createdBy:
+          type: string
+          description: ID of the user who created the ticket
+        branchId:
+          type: string
+          description: ID of the branch associated with the ticket
+        companyId:
+          type: string
+          description: ID of the company associated with the ticket
+        assignedBy:
+          type: string
+          description: ID of the user who assigned the ticket
+        assignedTo:
+          type: string
+          description: ID of the user to whom the ticket is assigned
+        title:
+          type: string
+          description: Title of the ticket
+        ticketNo:
+          type: integer
+          description: Ticket number
+        description:
+          type: string
+          description: Description of the ticket
+        category:
+          type: array
+          items:
+            type: string
+          description: Categories associated with the ticket
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the ticket was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the ticket was last updated
+        orgId:
+          type: string
+          description: Organization ID
+        feedbackRating:
+          type: number
+          description: Feedback rating for the ticket
+        ticketStatus:
+          type: string
+          description: Status of the ticket
+        ticketImageUrl:
+          type: array
+          items:
+            type: string
+          description: URLs of images related to the ticket
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last modification of the ticket
+        ticketDeadlineTime:
+          type: string
+          format: date-time
+          description: Deadline time for the ticket
+    TicketHistory:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the ticket history entry
+        createdBy:
+          type: string
+          description: ID of the user who created the ticket history entry
+        ticketId:
+          type: string
+          description: ID of the ticket associated with the history entry
+        branchId:
+          type: string
+          description: ID of the branch related to the ticket history
+        assignedBy:
+          type: string
+          description: ID of the user who assigned the ticket
+        assignedTo:
+          type: string
+          description: ID of the user to whom the ticket is assigned
+        previousStatus:
+          type: string
+          description: Previous status of the ticket
+        updatedStatus:
+          type: string
+          description: Updated status of the ticket
+        comment:
+          type: string
+          description: Additional comments or notes
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the ticket history entry was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last update to the ticket history entry
+        type:
+          type: string
+          description: Type of the ticket history entry
+        orgId:
+          type: string
+          description: Organization ID
+    PurchaseRequest:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the purchase request
+        branches:
+          type: array
+          items:
+            type: string
+          description: List of branch IDs associated with the purchase request
+        quantity:
+          type: integer
+          description: Quantity of the product
+        type:
+          type: string
+          description: Type of the purchase request (e.g., ONE-TIME, RECURRING)
+        productType:
+          type: string
+          description: Type of the product
+        productName:
+          type: string
+          description: Name of the product
+        productDescription:
+          type: string
+          description: Description of the product
+        productSpecifications:
+          type: string
+          description: Specifications of the product
+        images:
+          type: string
+          description: URL of the product image
+        targetedPrice:
+          type: number
+          description: Targeted price for the product
+        quotations:
+          type: array
+          items:
+            type: string
+          description: List of quotation IDs associated with the purchase request
+        createdById:
+          type: string
+          description: ID of the user who created the purchase request
+        category:
+          type: array
+          items:
+            type: string
+          description: List of categories associated with the purchase request
+        clientId:
+          type: string
+          description: ID of the client associated with the purchase request
+        purchaseOrderId:
+          type: string
+          description: ID of the purchase order associated with the purchase request
+        status:
+          type: string
+          description: Status of the purchase request
+        purchaseRequestStatus:
+          type: string
+          description: Status of the purchase request
+        purchaseRequestNumber:
+          type: integer
+          description: Purchase request number
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase request was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase request was last updated
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last modification of the purchase request
+    PurchaseOrder:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the purchase order
+        quotationId:
+          type: string
+          description: ID of the quotation associated with the purchase order
+        createdBy:
+          type: string
+          description: ID of the user who created the purchase order
+        approvedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase order was approved
+        approvedBy:
+          type: string
+          description: ID of the user who approved the purchase order
+        vendorId:
+          type: string
+          description: ID of the vendor associated with the purchase order
+        purchaseRequestId:
+          type: string
+          description: ID of the purchase request associated with the purchase order
+        status:
+          type: string
+          description: Status of the purchase order
+        poStatus:
+          type: string
+          description: Status of the purchase order payment
+        amountPayable:
+          type: number
+          description: Total amount payable for the purchase order
+        amountPaid:
+          type: number
+          description: Amount already paid for the purchase order
+        amountDue:
+          type: number
+          description: Remaining amount due for the purchase order
+        baseAmount:
+          type: number
+          description: Base amount of the purchase order
+        tdsAmount:
+          type: number
+          description: TDS amount for the purchase order
+        tdsDeduction:
+          type: number
+          description: TDS deduction percentage for the purchase order
+        type:
+          type: string
+          description: Type of the purchase order
+        products:
+          type: array
+          items:
+            $ref: "#/components/schemas/PurchaseOrderProduct"
+        productType:
+          type: string
+          description: Type of the product
+        branches:
+          type: array
+          items:
+            type: string
+          description: List of branch IDs associated with the purchase order
+        purchaseDate:
+          type: string
+          format: date-time
+          description: Date of the purchase order
+        purchaseOrderNumber:
+          type: integer
+          description: Purchase order number
+        poDocuments:
+          type: array
+          items:
+            $ref: "#/components/schemas/PurchaseOrderDocument"
+        orgId:
+          type: string
+          description: Organization ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase order was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase order was last updated
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last modification of the purchase order
+    PurchaseOrderProduct:
+      type: object
+      properties:
+        productName:
+          type: string
+          description: Name of the product
+        description:
+          type: string
+          description: Description of the product
+        productImage:
+          type: string
+          description: URL of the product image
+        quantity:
+          type: integer
+          description: Quantity of the product
+        unit:
+          type: string
+          description: Unit of the product
+        unitPrice:
+          type: number
+          description: Unit price of the product
+        taxPercent:
+          type: number
+          description: Tax percentage for the product
+        hsnSacCode:
+          type: string
+          description: HSN/SAC code for the product
+        typeOfTax:
+          type: string
+          description: Type of tax for the product
+        tdsPercent:
+          type: number
+          description: TDS percentage for the product
+        baseAmount:
+          type: number
+          description: Base amount of the product
+        totalTax:
+          type: number
+          description: Total tax for the product
+        totalPrice:
+          type: number
+          description: Total price of the product
+        tdsAmount:
+          type: number
+          description: TDS amount for the product
+        sequenceNumber:
+          type: integer
+          description: Sequence number of the product
+        totalReceivedQuantity:
+          type: integer
+          description: Total received quantity of the product
+        currentReceivedQuantity:
+          type: integer
+          description: Current received quantity of the product
+    PurchaseOrderDocument:
+      type: object
+      properties:
+        documentUrl:
+          type: string
+          description: URL of the purchase order document
+        name:
+          type: string
+          description: Name of the purchase order document
+        size:
+          type: string
+          description: Size of the purchase order document
+        type:
+          type: string
+          description: Type of the purchase order document
+        upLoadedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase order document was uploaded
+    PurchaseOrderPayment:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the purchase payment
+        purchaseOrderId:
+          type: string
+          description: ID of the purchase order associated with the payment
+        amount:
+          type: number
+          description: Amount of the payment
+        tds:
+          type: number
+          description: TDS amount
+        baseAmount:
+          type: number
+          description: Base amount of the payment
+        paymentMethod:
+          type: string
+          description: Payment method
+        notes:
+          type: string
+          description: Notes for the payment
+        amountPayable:
+          type: number
+          description: Amount payable
+        amountDue:
+          type: number
+          description: Amount due
+        amountPaid:
+          type: number
+          description: Amount paid
+        tdsDeduction:
+          type: number
+          description: TDS deduction percentage
+        totalTaxPaid:
+          type: number
+          description: Total tax paid
+        orgId:
+          type: string
+          description: Organization ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the purchase payment was created
+    PurchaseOrderHistory:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the purchase order history entry
+        createdBy:
+          type: string
+          description: ID of the user who created the history entry
+        POapprovedBy:
+          type: string
+          description: ID of the user who approved the purchase order
+        purchaseOrderId:
+          type: string
+          description: ID of the purchase order associated with the history entry
+        previousStatus:
+          type: string
+          description: Previous status of the purchase order
+        updatedStatus:
+          type: string
+          description: Updated status of the purchase order
+        comment:
+          type: string
+          description: Comment related to the status update
+        updatedProducts:
+          type: array
+          items:
+            $ref: "#/components/schemas/PurchaseOrderProduct"
+          description: Updated products information
+        type:
+          type: string
+          description: Type of the history entry
+        orgId:
+          type: string
+          description: Organization ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the history entry was created
+          example: "2020-01-01T00:00"
+    Quotation:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the quotation
+        createdById:
+          type: string
+          description: ID of the user who created the quotation
+        totalPricePayable:
+          type: number
+          description: Total price payable for the quotation
+        totalTax:
+          type: number
+          description: Total tax for the quotation
+        grandTotal:
+          type: number
+          description: Grand total for the quotation
+        paymentTerms:
+          type: string
+          description: Payment terms for the quotation
+        amc:
+          type: string
+          description: AMC details for the quotation
+        serviceTerms:
+          type: string
+          description: Service terms for the quotation
+        products:
+          type: array
+          items:
+            $ref: "#/components/schemas/QuotationProduct"
+          description: List of products in the quotation
+        branches:
+          type: array
+          items:
+            type: string
+          description: List of branch IDs associated with the quotation
+        status:
+          type: string
+          description: Status of the quotation
+        purchaseOrderStatus:
+          type: string
+          description: Status of the purchase order
+        approvedBy:
+          type: string
+          description: ID of the user who approved the quotation
+        quotationNumber:
+          type: integer
+          description: Quotation number
+        purchaseRequestId:
+          type: string
+          description: ID of the purchase request associated with the quotation
+        vendorId:
+          type: string
+          description: ID of the vendor associated with the quotation
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the quotation was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the quotation was last updated
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last modification of the quotation
+        purchaseOrderId:
+          type: string
+          description: ID of the purchase order associated with the quotation
+    QuotationProduct:
+      type: object
+      properties:
+        productName:
+          type: string
+          description: Name of the product
+        description:
+          type: string
+          description: Description of the product
+        productImage:
+          type: string
+          description: URL of the product image
+        quantity:
+          type: integer
+          description: Quantity of the product
+        unit:
+          type: string
+          description: Unit of the product
+        unitPrice:
+          type: number
+          description: Unit price of the product
+        taxPercent:
+          type: number
+          description: Tax percentage for the product
+        hsnSacCode:
+          type: string
+          description: HSN/SAC code for the product
+        typeOfTax:
+          type: string
+          description: Type of tax for the product
+        tdsPercent:
+          type: number
+          description: TDS percentage for the product
+        baseAmount:
+          type: number
+          description: Base amount of the product
+        totalTax:
+          type: number
+          description: Total tax for the product
+        totalPrice:
+          type: number
+          description: Total price of the product
+        tdsAmount:
+          type: number
+          description: TDS amount for the product
+        sequenceNumber:
+          type: integer
+          description: Sequence number of the product
+    Asset:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique identifier for the asset
+        name:
+          type: string
+          description: Name of the asset
+        purchaseOrderId:
+          type: string
+          description: ID of the purchase order associated with the asset
+        vendorId:
+          type: string
+          description: ID of the vendor associated with the asset
+        quotationId:
+          type: string
+          description: ID of the quotation associated with the asset
+        amc:
+          type: string
+          description: AMC details for the asset
+        serviceTerms:
+          type: string
+          description: Service terms for the asset
+        description:
+          type: string
+          description: Description of the asset
+        branchId:
+          type: array
+          items:
+            type: string
+          description: List of branch IDs associated with the asset
+        category:
+          type: array
+          items:
+            type: string
+          description: List of categories associated with the asset
+        activeQuantity:
+          type: integer
+          description: Active quantity of the asset
+        totalQuantity:
+          type: integer
+          description: Total quantity of the asset
+        assetAllocation:
+          type: array
+          items:
+            type: string
+          description: List of asset allocation IDs
+        onboardingDate:
+          type: string
+          format: date-time
+          description: Date when the asset was onboarded
+        status:
+          type: string
+          description: Status of the asset
+        assetStatus:
+          type: string
+          description: Status of the asset
+        unitPrice:
+          type: number
+          description: Unit price of the asset
+        totalPriceBeforeTax:
+          type: number
+          description: Total price of the asset before tax
+        totalTaxAmount:
+          type: number
+          description: Total tax amount for the asset
+        totalAmount:
+          type: number
+          description: Total amount for the asset
+        assetDocuments:
+          type: array
+          items:
+            $ref: "#/components/schemas/AssetDocument"
+          description: List of asset documents
+        type:
+          type: string
+          description: Type of the asset
+        currentLocation:
+          type: string
+          description: Current location of the asset
+        serialNumber:
+          type: string
+          description: Serial number of the asset
+        brand:
+          type: string
+          description: Brand of the asset
+        orgId:
+          type: string
+          description: Organization ID
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the asset was created
+        modifiedAt:
+          type: string
+          format: date-time
+          description: Timestamp of the last modification of the asset
+    AssetDocument:
+      type: object
+      properties:
+        documentUrl:
+          type: string
+          description: URL of the asset document
+        name:
+          type: string
+          description: Name of the asset document
+        size:
+          type: string
+          description: Size of the asset document
+        type:
+          type: string
+          description: Type of the asset document
+        upLoadedAt:
+          type: string
+          format: date-time
+          description: Timestamp of when the asset document was uploaded
+
     badRequestBadRequest:
       type: object
       properties:
@@ -3532,7 +5494,7 @@ components:
           description: Error message
           example: "Client Closed Request"
 
-    internalServerErrror:
+    internalServerError:
       type: object
       properties:
         status:
